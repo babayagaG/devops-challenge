@@ -1,0 +1,51 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <script
+      src="https://kit.fontawesome.com/357dd17236.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="navbar container">
+        <a href="/posts/{{user.id}}" class="logo">
+          <h2>BlogApp</h2>
+        </a>
+        <ul class="nav-links">
+          <li><a href="/auth/logout" class="logout"><i
+                class="fa fa-sign-out"
+                aria-hidden="true"
+              ></i></a></li>
+          <li><a href="/profile/{{user.id}}"><i
+                class="fa fa-user"
+                aria-hidden="true"
+              ></i></a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="container">
+        <div>
+          <div class="blog-title-detailed">
+            <h3>{{post.title}}</h3>
+          </div>
+          <div class="blog-author-detailed">
+            <a href="#">{{post.author}}</a>
+          </div>
+          <div class="blog-body-detailed">
+            <div class="pre-view-detailed">
+              {{{post.body}}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="/js/script.js"></script>
+  </body>
+
+</html>

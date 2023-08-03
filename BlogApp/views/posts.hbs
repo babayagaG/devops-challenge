@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{title}}</title>
+  <script src="https://kit.fontawesome.com/357dd17236.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="navbar container">
+      <a href="/posts/{{user.id}}" class="logo">
+        <h2>BlogApp</h2>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/auth/logout" class="logout">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+        <li><a href="/profile/{{user.id}}">Profile <i class="fa fa-user" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <div class="container blog-container-header">
+      <h2>All Posts</h2>
+        <a href="/posts/add/{{user.id}}" class="nav-link add">
+          New Post <i class="fa fa-plus" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="container blog-list">
+      {{! cards }}
+      {{#if posts}}
+      {{#each posts}}
+      {{!-- {{#each author}} --}}
+        <a class="blog" href="/posts/{{../user.id}}/{{id}}">
+        <div class="blog-title">
+          <h3>{{title}}</h3>
+        </div>
+        <div class="blog-body">
+          {{{desc}}}
+        </div>
+        <div class="blog-author-detailed">
+          <p>{{author}}</p>
+        </div>
+        </a>
+      {{/each}}
+      {{else}}
+      <h4>No Blogs found</h4>
+      {{/if}}
+      {{! cards end }}
+    </div>
+  </main>
+  <script src="/js/script.js"></script>
+</body>
+
+</html>

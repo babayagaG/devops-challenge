@@ -5,7 +5,15 @@
 2. MySQL Server version 5.7 and above is running.
 
 ### Step 1
-Edit the .env file at the root directory. Change the `PROD_HOST="blogapp-mysqldb-1"` into your MySQL Server IP or Hostname.
+Edit the .env file.
+
+Change the variables according to the MySQL database server that you have setup.
+
+Change the `PROD_PASSWORD="password"` with the root password of your MySQL server.
+
+Change the `PROD_DATABASE="challenge"` with the database name that you have created inside your MySQL server.
+
+Change the `PROD_HOST="blogapp-mysqldb-1"` into your MySQL Server IP or Hostname.
 
 ### Step 2
 Run the command below.

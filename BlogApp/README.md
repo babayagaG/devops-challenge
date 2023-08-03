@@ -26,3 +26,6 @@ In order to start the application, you will need to run the command below.
 ```
 npm run start
 ```
+You can visit http://<your server ip>:3000/
+
+You can register a new user to test the application functionality.

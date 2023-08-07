@@ -1,10 +1,8 @@
 # Fusang DevOps Challenge
 
 ### Prerequisite
-Please clone the repository into your local machine and start working on the tasks listed below.
-```
-git clone https://kevinseecom@bitbucket.org/kevinseecom/challenge.git
-```
+Please clone this current repository into your local machine and start working on the tasks listed below.
+
 Once you have completed the tasks then, you can upload to your Git Repo and provide us the link for downloading.
 
 ### Task 1

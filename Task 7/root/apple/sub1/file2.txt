@@ -1,0 +1,3 @@
+an example of ip 76.32.66.122
+this is an example of ip 53.26.200.155
+ip 645.124.5.500 and 65.29.2000.1

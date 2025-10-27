@@ -1,0 +1,3 @@
+hello world 127.0.0.1
+another line of ip 8.8.8.8
+additionally there is correct ip 212.188.0.254 and incorrect ip 0.2.5566.47983

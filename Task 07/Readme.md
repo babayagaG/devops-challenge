@@ -1,8 +1,8 @@
 ## Task 7
 
-Please use either Python, NodeJS or Bash script to write a script to solve the below problem.
+Please use either Python, NodeJS or BASH to write a script that will solve the problem below.
 
-There is a hierarchy of folders and also files in some of the folders.
+There is a hierarchy of folders and files in some of the folders.
 
 ```
 /root/apple/sub1/file1.txt, file2.txt, ...

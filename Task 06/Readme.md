@@ -1,6 +1,6 @@
 ## Task 6
 
-Please use either Python, NodeJS or Bash script to write a script to process the data.
+Please use either Python, NodeJS or BASH to write a script that will process the data.
 
 There is a data.csv file in the /root/ directory containing information about your customers.
 

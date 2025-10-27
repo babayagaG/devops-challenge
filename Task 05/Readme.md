@@ -1,7 +1,7 @@
 ### Task 5
 There is an earthquake disaster happened in Japan.
 
-All the AWS datacentres located in Japan and all the applications went offline. 
+All the AWS datacentres located in Japan went offline. Thus, `Cody` application was offline too.
 
 Please provide a High-Availability solution in order to future proof the application from being offline.
 

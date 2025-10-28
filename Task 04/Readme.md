@@ -1,5 +1,5 @@
 ### Task 4
-Suggest a highly scaleable infrastructure for `Cody` application. 
+Suggest a highly scalable infrastructure for `Cody` application. 
 
 This infrastructure should support 1,000,000 users concurrently accessing `Cody` application.
 

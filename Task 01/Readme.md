@@ -1,4 +1,4 @@
 ### Task 1
 Dockerize the `Cody` application.
 
-You will need to run another Docker container for MySQL database to support `Cody` application.
+`Cody` application will require MySQL Database therefore you can choose to setup the MySQL on your local machine or another separate Docker container.

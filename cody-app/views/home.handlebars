@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-md-8">
+        <h1>Latest Blog Posts</h1>
+        
+        {{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+        {{/if}}
+
+        {{#if posts}}
+            {{#each posts}}
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title">
+                            <a href="/post/{{id}}" class="text-decoration-none">{{title}}</a>
+                        </h2>
+                        <p class="card-text">{{substring content 0 200}}{{#if (gt content.length 200)}}...{{/if}}</p>
+                        <small class="text-muted">
+                            By {{username}} on {{formatDate created_at}}
+                        </small>
+                    </div>
+                </div>
+            {{/each}}
+        {{else}}
+            <div class="alert alert-info">
+                No blog posts yet. {{#if user}}<a href="/create">Create the first post!</a>{{else}}<a href="/auth/register">Register</a> to start blogging.{{/if}}
+            </div>
+        {{/if}}
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h5>Welcome to Demo Blog</h5>
+            </div>
+            <div class="card-body">
+                {{#if user}}
+                    <p>Welcome back, {{user.username}}!</p>
+                    <a href="/create" class="btn btn-primary">Write a New Post</a>
+                {{else}}
+                    <p>Join our community to share your thoughts and stories.</p>
+                    <a href="/auth/register" class="btn btn-primary">Sign Up</a>
+                    <a href="/auth/login" class="btn btn-outline-secondary">Login</a>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</div>

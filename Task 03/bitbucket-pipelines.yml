@@ -1,0 +1,14 @@
+image: hashicorp/terraform:1.5.0
+
+pipelines:
+  branches:
+    main:
+      - step:
+          name: Terraform Init, Plan, and Apply
+          script:
+            - echo "🚀 Starting Terraform Deployment for Cody App"
+            - cd ../Task\ 02   # Go to Task 02 directory (where Terraform files are)
+            - terraform init -input=false
+            - terraform validate
+            - terraform plan -out=tfplan
+            - terraform apply -auto-approve tfplan

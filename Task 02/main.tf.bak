@@ -23,3 +23,8 @@ module "ecs" {
   subnets = module.vpc.public_subnets
   key_name = "terraform-key"
 }
+
+
+output "ecs_instance_id" {
+  value = module.ecs.instance_id
+}

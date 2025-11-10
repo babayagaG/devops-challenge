@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: codydb
+      MYSQL_USER: codyuser
+      MYSQL_PASSWORD: codypass
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  cody-app:
+    build: ./cody-app
+    container_name: cody_app
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      DB_HOST: mysql
+      DB_USER: codyuser
+      DB_PASSWORD: codypass
+      DB_NAME: codydb
+    depends_on:
+      - mysql
+
+volumes:
+  mysql_data:
